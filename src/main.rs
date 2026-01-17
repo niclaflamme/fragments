@@ -468,7 +468,11 @@ fn render_post(post: &Post, back_label: &str) -> String {
       text-align: center;
     }}
     .post-body {{
-      opacity: 0.7;
+      color: #1c1917;
+    }}
+    .post-body p {{
+      color: rgba(28, 25, 23, 0.7);
+      font-weight: 300;
     }}
     .back-link {{
       display: inline-block;
@@ -489,6 +493,38 @@ fn render_post(post: &Post, back_label: &str) -> String {
       }}
       h1 {{
         font-size: 2.4rem;
+      }}
+    }}
+    @media print {{
+      @page {{
+        margin: 1in 1.5in;
+      }}
+      body {{
+        padding: 0;
+      }}
+      article {{
+        font-size: 14px;
+        line-height: 1.6;
+        padding-bottom: 0;
+      }}
+      header {{
+        margin-bottom: 20px;
+      }}
+      h1 {{
+        font-size: 2.1rem;
+      }}
+      h2 {{
+        break-after: avoid;
+        page-break-after: avoid;
+      }}
+      h2 {{
+        font-size: 1.4rem;
+      }}
+      .subtitle {{
+        font-size: 1.12rem;
+      }}
+      .post-footer {{
+        display: none;
       }}
     }}
   </style>
