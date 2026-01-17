@@ -1,4 +1,4 @@
-.PHONY: new serve compile rename dev permissions build
+.PHONY: new serve compile rename dev permissions build build\:railway run\:railway
 
 new:
 	@./scripts/new_post.sh
@@ -20,3 +20,9 @@ rename:
 
 permissions:
 	@chmod +x scripts/*.sh
+
+build\:railway:
+	@docker build -t blog-railway .
+
+run\:railway:
+	@docker run --rm -p 3000:3000 -e PORT=3000 blog-railway
