@@ -52,9 +52,9 @@ In this new world, a milquetoast positive reference check is probably a strong s
 
 ## The Only Thing that Matters
 
-For engineers, chasing at least two sigmas or leaving the profession are the only two rational choices left.
+For engineers, chasing 2+ sigmas or leaving the profession are the only two rational choices.
 
-Eighteen months from now, for every developer who's better than you, there must be dozens who are obviously worse. Otherwise you will be unemployed. Remember, the very best baseball player you went to high school with is probably an accountant.
+Eighteen months from now, for every developer who's better than you, there must be dozens who are obviously worse or you are unemployed. Remember, the very best baseball player you went to high school with is probably an accountant.
 
 Raw talent alone won't get you there. The only reliable path is aggressive iteration: run experiments, try weird workflows, burn tokens on dead ends, and keep the handful of things that actually move your slope. If your employer doesn't support that—budget, permission, cultural air cover—the rational move is unfortunately to find one that does. Whether you take the rational move or not is entirely your call.
 
