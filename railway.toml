@@ -4,5 +4,5 @@ watchPatterns = ["src/**", "posts/**", "assets/**", "Cargo.toml", "Cargo.lock", 
 
 [deploy]
 restartPolicyType = "ON_FAILURE"
-healthcheckPath = "/"
+healthcheckPath = "/healthz"
 healthcheckTimeout = 60

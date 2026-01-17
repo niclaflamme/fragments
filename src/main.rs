@@ -10,6 +10,7 @@ use html_escape::encode_text;
 use pulldown_cmark::{html, Options, Parser};
 use std::fs;
 use std::io;
+use tower_http::services::{ServeDir, ServeFile};
 
 #[derive(Debug)]
 struct Post {
@@ -34,6 +35,12 @@ async fn main() {
 
     let app = Router::new()
         .route("/", get(index_handler))
+        .route("/healthz", get(health_handler))
+        .route_service(
+            "/favicon.ico",
+            ServeFile::new("assets/favicons/favicon.ico"),
+        )
+        .nest_service("/assets", ServeDir::new("assets"))
         .route("/posts/:slug", get(post_handler))
         .route("/posts/:slug/", get(post_handler))
         .route("/drafts/:slug", get(draft_handler))
@@ -82,6 +89,10 @@ fn export_site() -> io::Result<()> {
 async fn index_handler() -> impl IntoResponse {
     let posts = load_all_posts();
     Html(render_index(&posts)).into_response()
+}
+
+async fn health_handler() -> impl IntoResponse {
+    StatusCode::OK
 }
 
 async fn post_handler(
@@ -280,6 +291,9 @@ fn render_index(posts: &[Post]) -> String {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fragments</title>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet" />
@@ -381,6 +395,9 @@ fn render_post(post: &Post, back_label: &str) -> String {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet" />
@@ -501,6 +518,9 @@ fn render_not_found() -> String {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Not found</title>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet" />
