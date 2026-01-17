@@ -1,0 +1,8 @@
+[build]
+builder = "DOCKERFILE"
+watchPatterns = ["src/**", "posts/**", "assets/**", "Cargo.toml", "Cargo.lock", "Dockerfile"]
+
+[deploy]
+restartPolicyType = "ON_FAILURE"
+healthcheckPath = "/"
+healthcheckTimeout = 60
