@@ -60,7 +60,7 @@ Raw talent alone won't get you there. The only reliable path is aggressive itera
 
 If you love writing all the code yourself, I'm sorry, but it's time to give it up.
 
-## The Only Thing That Matters, Employer Edition
+## The Only Thing That Matters: Employer Edition
 
 If you're the employer and you're lucky enough to have a few of these weirdos on your team, you can't afford to lose them because by 2028, they'll be writing all the code. You might have to give them more free rein that you historically would have, sponsor their side projects, or just pay them more than anyone else while they figure all this out. But you have to keep them.
 
