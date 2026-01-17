@@ -24,7 +24,7 @@ AI will give software engineers the biggest year-over-year productivity increase
 
 Let me give you an imperfect analogy: imagine aliens dropping into 15th-century Europe, bearing gifts for a select group of 100 farmers. 90 get a small tractor, 9 get a combine. The last one gets a factory that builds driverless combines.
 
-In the above scenario, no one would dispute that all 100 farmers became dramatically more productive. Still, 99 families are packing up for the city within a year, their individual marginal contribution rounded down to zero anyway.
+In the above scenario, no one would dispute that all 100 farmers became dramatically more productive. Still, 99 families are packing up for the city because their individual marginal contribution rounded down to zero anyway.
 
 That's what's happening to code: the leverage gap will get so wide that the middle turns into a coordination tax.
 
