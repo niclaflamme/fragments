@@ -66,4 +66,4 @@ If you're the employer and you're lucky enough to have a few of these weirdos on
 
 Obviously, I might be completely wrong. However, the cost of over-indexing on the bifurcation of talent is a few thousand dollars in wasted tokens. The cost of under-indexing is a department full of useless people.
 
-If this turns into a baseball economy—like I believe it will—you need to have the pitcher who can throw 105 mph fastballs on your roster. Replacing the superstar with twenty guys who throw 95's wins zero games.
+If this turns into a baseball economy—like I believe it will—you need to have the pitcher who can throw 105 mph fastballs on your roster. Replacing the superstar with ten guys who throw 95 wins zero games.
