@@ -12,7 +12,6 @@ Fragments is a small Rust + Axum blog engine that renders Markdown posts into HT
 - `src/`: Rust application code (Axum server, routing, handlers).
 - `posts/`: Markdown blog posts (one file per post).
 - `assets/`: Static files (images, CSS, JS).
-- `tests/`: Integration and end-to-end tests.
 
 ## Running locally
 ```sh
@@ -36,10 +35,14 @@ This writes static HTML to `./public`.
 - URL mapping: `/posts/slug-words` (strip `YYYY-MM-DD-`, replace `_` with `-`)
 
 ## Development tools
-- `cargo test`: run tests.
 - `cargo fmt`: format code.
 - `cargo clippy`: lint.
 
+## Makefile
+- `make new`: create a new post via `scripts/new_post.sh`.
+- `make serve`: run the server.
+- `make dev`: run with `cargo watch`.
+- `make build`: export the static site.
+
 ## Deployment
 Railway builds with the provided `Dockerfile` and runs the Axum server.
-

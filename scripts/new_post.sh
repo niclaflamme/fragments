@@ -1,7 +1,17 @@
 #!/usr/bin/env sh
 set -eu
 
-title="${1:-New}"
+draft=false
+title="New"
+
+if [ "${1:-}" = "--draft" ]; then
+	draft=true
+	shift
+fi
+
+if [ "${1:-}" != "" ]; then
+	title="$1"
+fi
 
 posts_dir="posts"
 mkdir -p "$posts_dir"
@@ -20,7 +30,7 @@ Title: ${title}
 Date: ${date}
 Subtitle:
 Slug:
-Draft: true
+Draft: ${draft}
 
 ---
 

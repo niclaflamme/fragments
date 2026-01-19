@@ -297,7 +297,7 @@ fn render_index(posts: &[Post]) -> String {
   <link rel="manifest" href="/assets/favicons/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&family=Instrument+Serif:ital@0;1&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet" />
   {prefetch_html}
   <style>
     :root {{
@@ -456,12 +456,14 @@ fn render_post(post: &Post, back_label: &str) -> String {
       color: inherit;
     }}
     pre, code {{
-      font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-family: "Inconsolata", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
     }}
     pre {{
-      background: #efe6d6;
-      padding: 16px;
+      background: #f1f1f1;
+      padding: 12px 16px;
+      border-radius: 10px;
       overflow-x: auto;
+      font-size: 0.95rem;
     }}
     .post-footer {{
       margin-top: 200px;
@@ -473,6 +475,10 @@ fn render_post(post: &Post, back_label: &str) -> String {
     .post-body p {{
       color: rgba(28, 25, 23, 0.7);
       font-weight: 300;
+    }}
+    .post-body strong {{
+      font-weight: 600;
+      color: #1c1917;
     }}
     .back-link {{
       display: inline-block;

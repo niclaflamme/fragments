@@ -1,7 +1,10 @@
-.PHONY: new serve compile rename dev permissions build build\:railway run\:railway
+.PHONY: new draft serve compile rename dev permissions build build\:railway run\:railway
 
 new:
 	@./scripts/new_post.sh
+
+draft:
+	@./scripts/new_post.sh --draft
 
 serve:
 	@cargo run
