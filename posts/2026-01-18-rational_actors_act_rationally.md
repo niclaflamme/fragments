@@ -70,7 +70,7 @@ How many teams without coverage mandates organically choose to stockpile meaning
 
 ## Rational Actors Act Rationally
 
-Every engineer—myself included—has access to the magic “LLM ‘check these boxes’” button. I can keep the coverage number green forever. I can generate tests I didn’t write, approve tests I didn’t read, and nobody will reprimand me for it. What a shame.
+Every engineer—myself included—has access to the magic “LLM check these boxes’” button. I can keep the coverage number green forever. I can generate tests I didn’t write, approve tests I didn’t read, and nobody will reprimand me for it. What a shame.
 
 Two years ago, I’d have kicked and screamed. I’d have threatened to quit over being asked to work with a hand tied behind my back. I’d have demanded room to bend the rules, and I’d have offered my job as collateral if my bold claims didn’t pan out.
 
