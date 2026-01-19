@@ -331,10 +331,9 @@ fn render_index(posts: &[Post]) -> String {
     }}
     .post-list li {{
       display: flex;
-      flex-wrap: wrap;
-      gap: 8px 16px;
-      align-items: baseline;
-      justify-content: space-between;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-start;
       padding: 12px 0;
       border-bottom: 1px solid #e7e5e4;
     }}
