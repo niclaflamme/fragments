@@ -457,6 +457,16 @@ fn render_post(post: &Post, back_label: &str) -> String {
     pre, code {{
       font-family: "Inconsolata", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
     }}
+    code {{
+      background: #f1f1f1;
+      font-size: 0.95rem;
+      border-radius: 6px;
+      padding: 2px 6px;
+    }}
+    pre code {{
+      background: transparent;
+      padding: 0;
+    }}
     pre {{
       background: #f1f1f1;
       padding: 12px 16px;

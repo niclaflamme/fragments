@@ -1,5 +1,5 @@
 Title: Chasing Two Sigmas: Preparing for the Power-Law Era of Software Engineering
-Date: 2025-01-05
+Date: 2025-01-15
 Slug: chasing-two-sigmas
 
 ---
