@@ -67,8 +67,8 @@ Every engineer—myself included—has access to the magic “LLM check these bo
 
 What a shame.
 
-Two years ago, I’d have kicked and screamed. I’d have threatened to quit over being asked to do bullshit work with one hand tied behind my back. I’d have demanded room to bend the rules, and I’d have offered my job as collateral if my bold claims of 5x improvements didn’t pan out.
+Two years ago, I’d have kicked and screamed. I’d have threatened to quit over being asked to do pretend work with one hand tied behind my back. I’d have demanded room to bend the rules, and I’d have offered my job as collateral if my bold claims of "5x improvements" didn’t pan out.
 
-But I'm no martyr. Without an explicit mandate from my managers to stir the pot, I will take an implicit mandate from my environment, and dance to the music.
+But I'm no martyr. Without an explicit mandate from my managers to stir the pot, I will take an implicit mandate from my environment and participate in the safety dance.
 
 Rational actors act rationally.
