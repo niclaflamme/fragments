@@ -12,7 +12,7 @@ When a measure becomes a target, it ceases to be a good measure.
 
 This is even more true now that LLMs can generate whatever artifacts the metric rewards with zero marginal cost. Today, you can buy the appearance of rigor for the price of a prompt.
 
-If your engineers weren’t writing when you didn't have a code coverage mandate, and now they’re "catching up" by shipping 5,000 lines before lunch, they’re writing the same amount of tests as before: zero.
+If your engineers weren’t writing tests when you didn't have a code coverage mandate, and now they’re catching up by shipping 5,000 lines before lunch, they’re writing the same amount of tests as before. Zero.
 
 It's obviously manufactured compliance, but don’t blame the engineers. The company built a system that rewards appearances, and got appearances.
 
@@ -39,13 +39,11 @@ To make matters worse, the tests that are easiest for LLMs to generate are the l
 
 The front-end team didn’t really write a `LoginButton`. They wrote a wrapper around a wrapper around `RadixUI`. When Claude automatically adds a test that asserts the click handler doesn’t fire when disabled, it’s not testing anything not already covered by `RadixUI`’s test suite.
 
-But... the coverage percentage went up.
-
-Claude also loves mocked databases: the purest form of testing nothing. Of course the mock returns the value you asked for. Real systems fail on unique constraints, transactions, timeouts, and concurrency—exactly the stuff your mock refuses to model.
+On the back-end, Claude loves mocked databases: the purest form of testing nothing. Of course the mock returns the value you asked for. Real systems fail on unique constraints, transactions, timeouts, and concurrency—exactly the stuff your mock refuses to model.
 
 But... the coverage percentage went up.
 
-## The Compounding Cripples
+## The Compounding Cripplers
 
 If you really wanted to destroy an engineering team’s productivity, you’d pair test coverage mandates with small-PR mandates.
 
@@ -65,10 +63,12 @@ How many teams without coverage mandates organically choose to stockpile bullshi
 
 ## Rational Actors Act Rationally
 
-Every engineer—myself included—has access to the magic “LLM check these boxes’” button. I can keep the coverage number green forever. I can generate tests I didn’t write, approve tests I didn’t read, and nobody will reprimand me for it. What a shame.
+Every engineer—myself included—has access to the magic “LLM check these boxes’” button. I can keep the coverage number green forever. I can generate tests I didn’t write, approve tests I didn’t read, and nobody will reprimand me for it.
 
-Two years ago, I’d have kicked and screamed. I’d have threatened to quit over being asked to work with a hand tied behind my back. I’d have demanded room to bend the rules, and I’d have offered my job as collateral if my bold claims didn’t pan out.
+What a shame.
 
-But I'm no martyr. Without an explicit mandate from my managers to stir the pot, I will take the implicit mandate from my environment and dance to the music.
+Two years ago, I’d have kicked and screamed. I’d have threatened to quit over being asked to do bullshit work with one hand tied behind my back. I’d have demanded room to bend the rules, and I’d have offered my job as collateral if my bold claims of 5x improvements didn’t pan out.
+
+But I'm no martyr. Without an explicit mandate from my managers to stir the pot, I will take an implicit mandate from my environment, and dance to the music.
 
 Rational actors act rationally.
