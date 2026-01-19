@@ -4,7 +4,7 @@ Draft: true
 
 ---
 
-I could’ve titled this "The Tests Everyone Pretends to Care About," but the last paragraph made that feel too narrow. This article starts as a critique of vanity KPIs, but it’s really an essay about incentives—and the gap between stated and revealed preferences.
+I could’ve titled this "The Tests Everyone Pretends to Care About," but the last paragraph made that feel too narrow. This article started as a critique of vanity KPIs, but it’s really an essay about incentives—and the gap between stated and revealed preferences.
 
 ## The Tests Nobody Writes
 
