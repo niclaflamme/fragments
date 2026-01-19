@@ -294,7 +294,7 @@ fn render_index(posts: &[Post]) -> String {
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png" />
-  <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+  <link rel="manifest" href="/assets/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&family=Instrument+Serif:ital@0;1&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet" />
@@ -398,7 +398,7 @@ fn render_post(post: &Post, back_label: &str) -> String {
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png" />
-  <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+  <link rel="manifest" href="/assets/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet" />
