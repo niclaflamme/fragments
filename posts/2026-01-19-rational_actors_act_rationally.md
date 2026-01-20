@@ -39,7 +39,7 @@ To make matters worse, the tests that are easiest for LLMs to generate are the l
 
 The front-end team didn’t really write a `LoginButton`. They wrote a wrapper around a wrapper around `RadixUI`. When Cursor automatically adds a test that asserts the click handler doesn’t fire when disabled, it’s not testing anything not already covered by `RadixUI`’s test suite.
 
-On the back-end, Cursor loves mocked databases: the purest form of testing nothing. Of course the mock returns the value you asked for. Real systems fail on unique constraints, transactions, timeouts, and concurrency—exactly the stuff your mock refuses to model.
+On the back-end, Cursor loves mocked databases: the purest form of testing nothing. Of course the mock returns the value you asked for. Real systems fail on unique constraint violations, transactions, timeouts, and concurrency—exactly the stuff your mock refuses to model.
 
 But... the coverage percentage went up.
 
@@ -47,7 +47,7 @@ But... the coverage percentage went up.
 
 If you really wanted to hamstring an engineering team’s productivity, you’d pair test coverage mandates with PR size mandates.
 
-Once you combine “keep PRs tiny” with “keep coverage high,” you’ve effectively capped how much real change can fit in each pull request—in part because half of your already tiny diff budget is pre-allocated to the bullshit tests.
+Once you combine “keep PRs tiny” with “keep coverage high,” you’ve effectively capped how much real change can fit in each pull request—in part because half of your already tiny diff budget is pre-allocated to your bullshit tests.
 
 A natural 2,500-line PR can be reviewed as one coherent thought. The same change—forced into eight PRs—can’t. That’s eight reviews, eight context switches, and eight cycles of rebasing and merge conflicts.
 
@@ -63,10 +63,10 @@ How many teams without coverage mandates organically choose to stockpile useless
 
 ## Rational Actors Act Rationally
 
-Every engineer—myself included—now has access to the magic “LLM check these boxes’” button. I can keep the coverage number green forever. I can generate tests I didn’t write, approve tests I didn’t read, and nobody will reprimand me for it.
+Every engineer—myself included—now has access to the magic “LLM check these boxes” button. I can keep the coverage number green forever. I can generate tests I didn’t write, approve tests I didn’t read, and nobody will reprimand me for it.
 
 Two years ago, I’d have kicked and screamed. I’d have threatened to quit over being asked to perform pretend work. I’d have demanded room to bend the rules, and I’d have offered my job as collateral if my bold claims of "5x improvements" didn’t pan out.
 
-But I'm too old now. Without an explicit mandate from my managers to stir the pot, I will take an implicit mandate from my environment.
+But I'm too old now. Without an explicit mandate from my managers to stir the pot, I will listen to the implicit mandates from my environment.
 
 Rational actors act rationally.
