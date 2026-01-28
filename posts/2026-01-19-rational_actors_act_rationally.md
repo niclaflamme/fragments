@@ -55,7 +55,7 @@ But the coverage number went up in both cases, so everyone pretends its a win.
 
 Although this is embarrassing to admit, I’ve been saying for the past three years that I want to lose weight: that’s my stated preference. My revealed preference is the number on the scale. The undeniable truth is that I want to keep eating how I eat more than I want to fit in a t-shirt size that doesn't start with the letter X.
 
-Companies do the same thing. They say they want “higher expectations” and “higher clock speed.” But until they’re willing to accept the messiness that comes with speed, it’s just a slogan. You should discount it entirely.
+Companies do the same thing. They say they want “higher expectations” and “higher clock speed.” But until they’re willing to accept the messiness that comes with speed, it’s only a slogan. Discount it entirely.
 
 If you want to know what they truly want, look at what they reward and what they tolerate. Who gets promoted: the people who ship, or the people who apply the brakes?
 
