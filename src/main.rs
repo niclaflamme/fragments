@@ -1,13 +1,13 @@
 use axum::{
+    Router,
     extract::Path,
-    http::{header, HeaderMap, StatusCode},
+    http::{HeaderMap, StatusCode, header},
     response::{Html, IntoResponse},
     routing::get,
-    Router,
 };
 use chrono::NaiveDate;
 use html_escape::encode_text;
-use pulldown_cmark::{html, Options, Parser};
+use pulldown_cmark::{Options, Parser, html};
 use std::fs;
 use std::io;
 use tower_http::services::{ServeDir, ServeFile};
@@ -35,7 +35,6 @@ async fn main() {
 
     let app = Router::new()
         .route("/", get(index_handler))
-        .route("/healthz", get(health_handler))
         .route_service(
             "/favicon.ico",
             ServeFile::new("assets/favicons/favicon.ico"),
@@ -45,6 +44,7 @@ async fn main() {
         .route("/posts/:slug/", get(post_handler))
         .route("/drafts/:slug", get(draft_handler))
         .route("/drafts/:slug/", get(draft_handler))
+        .route("/healthz", get(health_handler))
         .fallback(fallback_handler);
 
     let addr = resolve_bind_addr();
@@ -57,8 +57,7 @@ async fn main() {
 }
 
 async fn fallback_handler() -> impl IntoResponse {
-    (StatusCode::NOT_FOUND, Html(render_not_found()))
-        .into_response()
+    (StatusCode::NOT_FOUND, Html(render_not_found())).into_response()
 }
 
 fn export_site() -> io::Result<()> {
@@ -94,24 +93,17 @@ async fn health_handler() -> impl IntoResponse {
     StatusCode::OK
 }
 
-async fn post_handler(
-    Path(slug): Path<String>,
-    headers: HeaderMap,
-) -> impl IntoResponse {
+async fn post_handler(Path(slug): Path<String>, headers: HeaderMap) -> impl IntoResponse {
     match load_post_by_slug(&slug) {
         Some(post) if !post.draft => {
             let label = back_label_from_referer(headers.get(header::REFERER));
             Html(render_post(&post, &label)).into_response()
         }
-        _ => (StatusCode::NOT_FOUND, Html(render_not_found()))
-            .into_response(),
+        _ => (StatusCode::NOT_FOUND, Html(render_not_found())).into_response(),
     }
 }
 
-async fn draft_handler(
-    Path(slug): Path<String>,
-    headers: HeaderMap,
-) -> impl IntoResponse {
+async fn draft_handler(Path(slug): Path<String>, headers: HeaderMap) -> impl IntoResponse {
     match load_post_by_slug(&slug) {
         Some(post) if post.draft => {
             let label = back_label_from_referer(headers.get(header::REFERER));
@@ -121,8 +113,7 @@ async fn draft_handler(
             let label = back_label_from_referer(headers.get(header::REFERER));
             Html(render_post(&post, &label)).into_response()
         }
-        _ => (StatusCode::NOT_FOUND, Html(render_not_found()))
-            .into_response(),
+        _ => (StatusCode::NOT_FOUND, Html(render_not_found())).into_response(),
     }
 }
 
@@ -155,9 +146,7 @@ fn load_all_posts() -> Vec<Post> {
     posts.sort_by(|a, b| {
         let a_date = NaiveDate::parse_from_str(&a.date, "%Y-%m-%d").ok();
         let b_date = NaiveDate::parse_from_str(&b.date, "%Y-%m-%d").ok();
-        b_date
-            .cmp(&a_date)
-            .then_with(|| b.title.cmp(&a.title))
+        b_date.cmp(&a_date).then_with(|| b.title.cmp(&a.title))
     });
 
     posts
@@ -269,9 +258,7 @@ fn render_index(posts: &[Post]) -> String {
         let formatted_date = format_date_full(&post.date);
         let date = encode_text(&formatted_date);
         let slug = encode_text(&post.slug);
-        prefetch_html.push_str(&format!(
-            r#"<link rel="prefetch" href="/posts/{slug}" />"#
-        ));
+        prefetch_html.push_str(&format!(r#"<link rel="prefetch" href="/posts/{slug}" />"#));
         items_html.push_str(&format!(
             r#"<li><a href="/posts/{slug}">{title}</a><span>{date}</span></li>"#
         ));
