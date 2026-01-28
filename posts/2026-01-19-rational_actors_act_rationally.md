@@ -12,7 +12,7 @@ This essay started as a rant about coverage mandates and vanity KPIs, and turned
 
 When a measure becomes a target, it ceases to be a good measure.
 
-Let’s talk about code coverage mandates. The biggest issue is that LLMs have driven the cost of compliance to zero.
+Let’s talk about code coverage mandates. My biggest issue with the mandates is that LLMs have driven the cost of compliance to zero.
 
 Today, you can buy the appearance of rigor for the price of a prompt. So if your team wasn’t writing any tests last year, and now they’re catching up by shipping 5,000 lines before lunch, nothing fundamental changed. They’re still writing the same number of tests as before: basically zero.
 
