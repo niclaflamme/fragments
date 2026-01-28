@@ -47,8 +47,7 @@ async fn main() {
         .route("/drafts/:slug/", get(draft_handler))
         .fallback(fallback_handler);
 
-    let port = std::env::var("PORT").unwrap_or_else(|_| "3000".to_string());
-    let addr = format!("0.0.0.0:{port}");
+    let addr = resolve_bind_addr();
     let listener = tokio::net::TcpListener::bind(&addr)
         .await
         .expect("bind address");
@@ -649,4 +648,25 @@ fn format_date_full(value: &str) -> String {
         Ok(date) => date.format("%B %-d, %Y").to_string(),
         Err(_) => value.to_string(),
     }
+}
+
+fn resolve_bind_addr() -> String {
+    if let Ok(bind_addr) = std::env::var("BIND_ADDR") {
+        let trimmed = bind_addr.trim();
+        if !trimmed.is_empty() {
+            return trimmed.to_string();
+        }
+    }
+
+    if let Ok(port) = std::env::var("PORT") {
+        let trimmed = port.trim();
+        if trimmed.contains(':') {
+            return trimmed.to_string();
+        }
+        if trimmed.parse::<u16>().is_ok() {
+            return format!("0.0.0.0:{trimmed}");
+        }
+    }
+
+    "0.0.0.0:3000".to_string()
 }

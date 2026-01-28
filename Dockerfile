@@ -18,13 +18,15 @@ FROM debian:bookworm-slim AS runtime
 WORKDIR /app
 
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends ca-certificates \
+  && apt-get install -y --no-install-recommends ca-certificates libcap2-bin \
   && rm -rf /var/lib/apt/lists/* \
   && useradd -m -u 10001 appuser
 
 COPY --from=builder /app/target/release/blog /app/blog
 COPY --from=builder /app/posts /app/posts
 COPY --from=builder /app/assets /app/assets
+
+RUN setcap 'cap_net_bind_service=+ep' /app/blog
 
 USER appuser
 ENV PORT=3000
