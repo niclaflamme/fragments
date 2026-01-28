@@ -289,11 +289,27 @@ fn render_index(posts: &[Post]) -> String {
     :root {{
       color-scheme: light;
     }}
+    .instrument-serif-regular {{
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      font-style: normal;
+    }}
+    .pt-sans-narrow-regular {{
+      font-family: "PT Sans Narrow", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }}
+    .pt-sans-narrow-bold {{
+      font-family: "PT Sans Narrow", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }}
     body {{
       margin: 0;
       padding: 72px 20px 48px;
       font-family: "PT Sans Narrow", sans-serif;
       font-weight: 400;
+      font-synthesis: none;
       background: #ffffff;
       color: #141311;
     }}
@@ -303,6 +319,7 @@ fn render_index(posts: &[Post]) -> String {
     }}
     h1 {{
       font-family: "Instrument Serif", serif;
+      font-weight: 400;
       font-size: 3rem;
       margin: 0 0 24px;
       letter-spacing: -0.01em;
@@ -325,6 +342,7 @@ fn render_index(posts: &[Post]) -> String {
     }}
     .post-list a {{
       font-family: "Instrument Serif", serif;
+      font-weight: 400;
       font-size: 1.5rem;
       color: inherit;
       text-decoration: none;
@@ -345,7 +363,7 @@ fn render_index(posts: &[Post]) -> String {
     }}
   </style>
 </head>
-<body>
+<body class="pt-sans-narrow-regular">
   <main>
     <h1>Fragments</h1>
     {list_html}
@@ -392,10 +410,27 @@ fn render_post(post: &Post, back_label: &str) -> String {
     :root {{
       color-scheme: light;
     }}
+    .instrument-serif-regular {{
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      font-style: normal;
+    }}
+    .pt-sans-narrow-regular {{
+      font-family: "PT Sans Narrow", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }}
+    .pt-sans-narrow-bold {{
+      font-family: "PT Sans Narrow", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }}
     body {{
       margin: 0;
       padding: 48px 20px;
       font-family: "PT Sans Narrow", sans-serif;
+      font-weight: 400;
+      font-synthesis: none;
       background: #ffffff;
       color: #1c1917;
     }}
@@ -412,6 +447,7 @@ fn render_post(post: &Post, back_label: &str) -> String {
     }}
     h1 {{
       font-family: "Instrument Serif", serif;
+      font-weight: 400;
       font-size: 3rem;
       margin: 0 0 8px;
       letter-spacing: -0.01em;
@@ -419,6 +455,7 @@ fn render_post(post: &Post, back_label: &str) -> String {
     }}
     h2 {{
       font-family: "Instrument Serif", serif;
+      font-weight: 400;
       font-size: 2rem;
       margin: 32px 0 12px;
       letter-spacing: -0.01em;
@@ -530,7 +567,7 @@ fn render_post(post: &Post, back_label: &str) -> String {
     }}
   </style>
 </head>
-<body>
+<body class="pt-sans-narrow-regular">
   <article>
     <header>
       <h1>{title}</h1>
@@ -568,11 +605,27 @@ fn render_not_found() -> String {
     :root {{
       color-scheme: light;
     }}
+    .instrument-serif-regular {{
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      font-style: normal;
+    }}
+    .pt-sans-narrow-regular {{
+      font-family: "PT Sans Narrow", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }}
+    .pt-sans-narrow-bold {{
+      font-family: "PT Sans Narrow", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }}
     body {{
       margin: 0;
       padding: 72px 20px 48px;
       font-family: "PT Sans Narrow", sans-serif;
       font-weight: 400;
+      font-synthesis: none;
       background: #ffffff;
       color: #141311;
       width: 100vw;
@@ -606,7 +659,7 @@ fn render_not_found() -> String {
     }}
   </style>
 </head>
-<body>
+<body class="pt-sans-narrow-regular">
   <main>
     <h1>Not found</h1>
     <a class="back-link" href="/">- Home -</a>
