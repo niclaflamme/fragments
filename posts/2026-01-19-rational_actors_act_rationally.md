@@ -1,6 +1,6 @@
 Title: Rational Actors Act Rationally
 Date: 2026-01-19
-Draft: true
+Draft: false
 
 ---
 
