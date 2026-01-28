@@ -27,6 +27,6 @@ COPY --from=builder /app/posts /app/posts
 COPY --from=builder /app/assets /app/assets
 
 USER appuser
-ENV PORT=3000
-EXPOSE 3000
+ENV PORT=8080
+EXPOSE 8080
 CMD ["/app/blog"]
