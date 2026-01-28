@@ -27,5 +27,7 @@ COPY --from=builder /app/posts /app/posts
 COPY --from=builder /app/assets /app/assets
 
 USER appuser
+ENV PORT=3000
+ENV RUST_BACKTRACE=1
 EXPOSE 3000
-CMD ["/app/blog"]
+CMD ["sh","-c","echo PORT=$PORT; /app/blog"]
