@@ -4,7 +4,9 @@ Draft: true
 
 ---
 
-I almost titled this “The Tests Everyone Pretends to Care About,” but the real topic is much bigger. This essay started as a rant about coverage mandates and vanity KPIs. It turned into something broader: incentives, and the gap between what people say they want and what their systems actually reward.
+I almost titled this “The Tests Everyone Pretends to Care About,” but the real topic is larger.
+
+This essay started as a rant about coverage mandates and vanity KPIs and turned into something about incentives, and the gap between what people say they want and what their systems actually reward.
 
 ## The Tests Nobody Writes
 
