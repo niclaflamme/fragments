@@ -9,4 +9,6 @@ html-escape = "0.2"
 pulldown-cmark = "0.10"
 tokio = { version = "1", features = ["full"] }
 chrono = { version = "0.4", default-features = false, features = ["alloc", "std"] }
-tower-http = { version = "0.5", features = ["fs"] }
+tower-http = { version = "0.5", features = ["fs", "trace"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"

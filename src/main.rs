@@ -1,16 +1,20 @@
+use std::fs;
+use std::io;
+
 use axum::{
     Router,
     extract::Path,
-    http::{HeaderMap, StatusCode, header},
+    http::{HeaderMap, Request, Response, StatusCode, header},
     response::{Html, IntoResponse},
     routing::get,
 };
 use chrono::NaiveDate;
 use html_escape::encode_text;
 use pulldown_cmark::{Options, Parser, html};
-use std::fs;
-use std::io;
+use std::time::Duration;
 use tower_http::services::{ServeDir, ServeFile};
+use tower_http::trace::TraceLayer;
+use tracing::Level;
 
 #[derive(Debug)]
 struct Post {
@@ -33,6 +37,26 @@ async fn main() {
         return;
     }
 
+    tracing_subscriber::fmt::init();
+
+    let trace_layer = TraceLayer::new_for_http()
+        .make_span_with(|req: &Request<_>| {
+            tracing::span!(
+                Level::INFO,
+                "http",
+                method = %req.method(),
+                path = %req.uri().path(),
+            )
+        })
+        .on_response(
+            |res: &Response<_>, latency: Duration, _span: &tracing::Span| {
+                tracing::info!(
+                    status = %res.status(),
+                    duration_ms = latency.as_millis()
+                );
+            },
+        );
+
     let app = Router::new()
         .route("/", get(index_handler))
         .route_service(
@@ -45,7 +69,8 @@ async fn main() {
         .route("/drafts/:slug", get(draft_handler))
         .route("/drafts/:slug/", get(draft_handler))
         .route("/healthz", get(health_handler))
-        .fallback(fallback_handler);
+        .fallback(fallback_handler)
+        .layer(trace_layer);
 
     let addr = resolve_bind_addr();
     let listener = tokio::net::TcpListener::bind(&addr)
