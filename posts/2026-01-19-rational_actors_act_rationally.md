@@ -71,6 +71,6 @@ Obviously, I think that's unfortunate or I wouldn’t be sticking my neck out wr
 
 Two years ago, I’d have kicked and screamed. I’d have threatened to quit over being asked to perform pretend work. I’d have demanded room to bend the rules and offered my job as collateral if the “5x improvements” I promised didn’t materialize.
 
-But I'm too old now. Without a very explicit mandate from his bosses to stir the pot, this family man has to follow the implicit mandate of his environment.
+But I'm too old now. Without a very explicit mandate from the top to break the pattern, this family man has to follow the implicit mandate of his environment.
 
 Rational actors act rationally.
