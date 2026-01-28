@@ -20,7 +20,9 @@ So if your team wasn’t writing any tests last year, and now they’re “catch
 "Cursor, I need 95% coverage on this PR. Make no mistakes."
 ```
 
-Don’t blame the engineers though. This is the rational response to the incentive structure. If you ask for artifacts, you get artifacts.
+Don’t blame the engineers though. This is the rational response to the incentive structure.
+
+If you ask for artifacts, you get artifacts.
 
 ## The Tests Nobody Reviews
 
