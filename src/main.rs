@@ -308,7 +308,7 @@ fn render_index(posts: &[Post]) -> String {
   <link rel="manifest" href="/assets/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&family=Instrument+Serif:ital@0;1&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Instrument+Serif&display=swap" rel="stylesheet" />
   {prefetch_html}
   <style>
     :root {{
@@ -319,21 +319,27 @@ fn render_index(posts: &[Post]) -> String {
       font-weight: 400;
       font-style: normal;
     }}
-    .pt-sans-narrow-regular {{
-      font-family: "PT Sans Narrow", sans-serif;
-      font-weight: 400;
+    .geist-regular {{
+      font-family: "Geist", sans-serif;
+      font-weight: 300;
       font-style: normal;
     }}
-    .pt-sans-narrow-bold {{
-      font-family: "PT Sans Narrow", sans-serif;
-      font-weight: 700;
+    .geist-bold {{
+      font-family: "Geist", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }}
+    .geist-mono {{
+      font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", monospace;
+      font-weight: 400;
       font-style: normal;
     }}
     body {{
       margin: 0;
       padding: 72px 20px 48px;
-      font-family: "PT Sans Narrow", sans-serif;
-      font-weight: 400;
+      font-family: "Geist", sans-serif;
+      font-weight: 300;
       font-synthesis: none;
       background: #ffffff;
       color: #141311;
@@ -349,6 +355,11 @@ fn render_index(posts: &[Post]) -> String {
       margin: 0 0 24px;
       letter-spacing: -0.01em;
       line-height: 1.3;
+    }}
+    h3 {{
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      font-size: 1.6rem;
     }}
     .post-list {{
       list-style: none;
@@ -388,7 +399,7 @@ fn render_index(posts: &[Post]) -> String {
     }}
   </style>
 </head>
-<body class="pt-sans-narrow-regular">
+<body class="geist-regular">
   <main>
     <h1>Fragments</h1>
     {list_html}
@@ -430,7 +441,7 @@ fn render_post(post: &Post, back_label: &str) -> String {
   <link rel="manifest" href="/assets/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Instrument+Serif&display=swap" rel="stylesheet" />
   <style>
     :root {{
       color-scheme: light;
@@ -440,21 +451,27 @@ fn render_post(post: &Post, back_label: &str) -> String {
       font-weight: 400;
       font-style: normal;
     }}
-    .pt-sans-narrow-regular {{
-      font-family: "PT Sans Narrow", sans-serif;
-      font-weight: 400;
+    .geist-regular {{
+      font-family: "Geist", sans-serif;
+      font-weight: 300;
       font-style: normal;
     }}
-    .pt-sans-narrow-bold {{
-      font-family: "PT Sans Narrow", sans-serif;
-      font-weight: 700;
+    .geist-bold {{
+      font-family: "Geist", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }}
+    .geist-mono {{
+      font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", monospace;
+      font-weight: 400;
       font-style: normal;
     }}
     body {{
       margin: 0;
       padding: 48px 20px;
-      font-family: "PT Sans Narrow", sans-serif;
-      font-weight: 400;
+      font-family: "Geist", sans-serif;
+      font-weight: 300;
       font-synthesis: none;
       background: #ffffff;
       color: #1c1917;
@@ -485,6 +502,13 @@ fn render_post(post: &Post, back_label: &str) -> String {
       margin: 32px 0 12px;
       letter-spacing: -0.01em;
     }}
+    h3 {{
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      font-size: 1.8rem;
+      margin: 24px 0 10px;
+      letter-spacing: -0.01em;
+    }}
     .subtitle {{
       font-family: "Instrument Serif", serif;
       font-size: 1.6rem;
@@ -503,7 +527,8 @@ fn render_post(post: &Post, back_label: &str) -> String {
       color: inherit;
     }}
     pre, code {{
-      font-family: "Inconsolata", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", monospace;
     }}
     code {{
       background: #f1f1f1;
@@ -534,7 +559,7 @@ fn render_post(post: &Post, back_label: &str) -> String {
       font-weight: 300;
     }}
     .post-body strong {{
-      font-weight: 600;
+      font-weight: 500;
       color: #1c1917;
     }}
     .back-link {{
@@ -592,7 +617,7 @@ fn render_post(post: &Post, back_label: &str) -> String {
     }}
   </style>
 </head>
-<body class="pt-sans-narrow-regular">
+<body class="geist-regular">
   <article>
     <header>
       <h1>{title}</h1>
@@ -625,7 +650,7 @@ fn render_not_found() -> String {
   <link rel="manifest" href="/assets/favicons/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Instrument+Serif&display=swap" rel="stylesheet" />
   <style>
     :root {{
       color-scheme: light;
@@ -635,21 +660,27 @@ fn render_not_found() -> String {
       font-weight: 400;
       font-style: normal;
     }}
-    .pt-sans-narrow-regular {{
-      font-family: "PT Sans Narrow", sans-serif;
-      font-weight: 400;
+    .geist-regular {{
+      font-family: "Geist", sans-serif;
+      font-weight: 300;
       font-style: normal;
     }}
-    .pt-sans-narrow-bold {{
-      font-family: "PT Sans Narrow", sans-serif;
-      font-weight: 700;
+    .geist-bold {{
+      font-family: "Geist", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }}
+    .geist-mono {{
+      font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", monospace;
+      font-weight: 400;
       font-style: normal;
     }}
     body {{
       margin: 0;
       padding: 72px 20px 48px;
-      font-family: "PT Sans Narrow", sans-serif;
-      font-weight: 400;
+      font-family: "Geist", sans-serif;
+      font-weight: 300;
       font-synthesis: none;
       background: #ffffff;
       color: #141311;
@@ -673,6 +704,11 @@ fn render_not_found() -> String {
       letter-spacing: -0.01em;
       line-height: 1.3;
     }}
+    h3 {{
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      font-size: 1.6rem;
+    }}
     .back-link {{
       display: inline-block;
       font-family: "Instrument Serif", serif;
@@ -684,7 +720,7 @@ fn render_not_found() -> String {
     }}
   </style>
 </head>
-<body class="pt-sans-narrow-regular">
+<body class="geist-regular">
   <main>
     <h1>Not found</h1>
     <a class="back-link" href="/">- Home -</a>
