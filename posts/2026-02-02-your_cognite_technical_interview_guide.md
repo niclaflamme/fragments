@@ -18,7 +18,7 @@ Here is the standard technical pipe:
 
 ## 1. Live Coding Interview
 
-This is a **90-minute session** focused on the design and development of an application. While we use **Python** and **React** in our daily work, you are welcome to use any language or framework you prefer.
+This is a **60-minute session** focused on the design and development of an application. While we use **Python** and **TypeScript** in our daily work, you are welcome to use any language or framework you prefer.
 
 - **Format:** Virtual via screen sharing.
 
@@ -34,7 +34,7 @@ This is a **45–60 minute session** where we discuss your previous experience b
 
 ## 3. Hiring Manager Conversation
 
-The final step is a **30-minute deep dive** with your potential future manager. At this stage, we are already confident in your technical skills, so the conversation is much more casual.
+The final step is a **45-minute deep dive** with your potential future manager. At this stage, we are already confident in your technical skills, so the conversation is much more casual.
 
 - **A Two-Way Street:** This is a perfect opportunity for you to "interview" your future boss, ask about team culture, and learn about our vision.
 - **Preparation:** We suggest doing a bit of research on the company beforehand. You can find an introduction to our mission and technology [at this link](https://www.youtube.com/watch?v=H2OjewTu_fY)—pro-tip: it's great at 1.5x speed.
