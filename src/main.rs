@@ -30,7 +30,7 @@ struct Post {
 async fn main() {
     if std::env::args().any(|arg| arg == "--export") {
         if let Err(err) = export_site() {
-            eprintln!("Export failed: {err}");
+            eprintln!("Export failed??: {err}");
             std::process::exit(1);
         }
         println!("Exported site to ./public");
