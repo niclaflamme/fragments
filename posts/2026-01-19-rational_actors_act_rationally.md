@@ -4,7 +4,7 @@ Draft: true
 
 ---
 
-I almost titled this “The Tests Everyone Pretends to Care About,” but that was too narrow.
+I almost titled this “The Tests Everyone Pretends to Care About,” but that was too narrow...
 
 This began as a rant about coverage mandates and vanity KPIs. It turned into an essay about the gap between what companies say they want and what their systems actually reward.
 
