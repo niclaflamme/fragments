@@ -6,7 +6,7 @@ Draft: true
 
 I almost titled this “The Tests Everyone Pretends to Care About,” but the issue goes way deeper than that.
 
-This began as a rant about coverage mandates and vanity KPIs. It turned into an essay about the gap between stated and revealed preferences.
+This began as a rant about coverage mandates and vanity KPIs. It turned into an essay about the gap between stated and revealed preferences—and corporate game theory.
 
 ## The Tests Nobody Writes
 
