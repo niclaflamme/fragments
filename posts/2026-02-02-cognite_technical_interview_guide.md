@@ -40,6 +40,6 @@ The final step is a **30-45 minute deep dive** with your future manager. At this
 
 - **Preparation:** We suggest doing a bit of research on the company beforehand. You can find an introduction to our mission and technology on our [website](https://cognite.com) or our [YouTube channel](https://www.youtube.com/@Cognite).
 
-- **Next Steps:** We aim to move quickly; assuming all stages are passed, we often look to extend an offer as early as the end of the day.
+- **Next Steps:** We aim to move quickly; assuming all stages are passed, we often look to extend an offer within a few days.
 
 Best of luck! We look forward to our conversation.
