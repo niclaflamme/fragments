@@ -12,7 +12,7 @@ This began as a rant about coverage mandates and vanity KPIs. It turned into an 
 
 Let’s talk about code coverage mandates.
 
-My biggest issue with them is that LLMs have driven the cost of compliance to zero. Today, you can get the appearance of rigor for free.
+My biggest issue with them is that LLMs have driven the cost of compliance to zero. Today, you can buy the appearance of rigor for the price of a prompt.
 
 If your team wasn’t writing any tests last year, and now they’re catching up by shipping 5,000 lines before lunch, nothing fundamental changed. The engineers are still writing zero tests.
 
