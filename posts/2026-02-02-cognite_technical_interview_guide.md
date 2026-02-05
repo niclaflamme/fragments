@@ -1,7 +1,7 @@
 Title: Your Cognite Technical Interview Guide
 Date: 2026-02-02
 Subtitle:
-Slug:
+Slug: cognite-technical-interview-guide
 Draft: true
 
 ---
