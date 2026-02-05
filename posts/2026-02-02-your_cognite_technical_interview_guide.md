@@ -28,16 +28,18 @@ This is a **60-minute session** focused on the design and development of an appl
 
 This is a **45–60 minute session** where we discuss your previous experience building software systems.
 
-- **Discussion:** We will explore how you solved challenging problems in the past and look at hypothetical scenarios.
+- **Format:** Virtual via screen sharing, or in person at one of our offices.
 
-- **Tools:** No specific preparation is needed; feel free to use any visual tools you like to illustrate your ideas.
+- **Focus:** We will explore how you solved challenging problems in the past and look at hypothetical scenarios. No specific preparation is needed, but we recommend reflecting on your past projects and being ready to discuss them in detail.
 
 ## 3. Hiring Manager Conversation
 
-The final step is a **45-minute deep dive** with your potential future manager. At this stage, we are already confident in your technical skills, so the conversation is much more casual.
+The final step is a **30-45 minute deep dive** with your future manager. At this stage, we are already confident in your technical skills, so the conversation is much more casual.
 
-- **A Two-Way Street:** This is a perfect opportunity for you to "interview" your future boss, ask about team culture, and learn about our vision.
-- **Preparation:** We suggest doing a bit of research on the company beforehand. You can find an introduction to our mission and technology [at this link](https://www.youtube.com/watch?v=H2OjewTu_fY)—pro-tip: it's great at 1.5x speed.
+- **A Two-Way Street:** This is a perfect opportunity for you to "interview" your potential future manager, ask about team culture, and learn about our vision.
+
+- **Preparation:** We suggest doing a bit of research on the company beforehand. You can find an introduction to our mission and technology on our [website](https://cognite.com) or our [YouTube channel](https://www.youtube.com/@Cognite).
+
 - **Next Steps:** We aim to move quickly; assuming all stages are passed, we often look to extend an offer as early as the end of the day.
 
 Best of luck! We look forward to our conversation.
